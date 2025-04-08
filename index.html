@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MangaVerse</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Manga<span>Verse</span></div>
-    <nav class="nav-buttons">
-      <button onclick="window.location.href='index.html'">Home</button>
-      <div class="dropdown">
-        <button>Genres</button>
-        <div class="dropdown-content genres-dropdown">
-          <a href="#">Action</a>
-          <a href="#">Romance</a>
-          <a href="#">Comedy</a>
-          <a href="#">Drama</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button>Top 5</button>
-        <div class="dropdown-content">
-          <a href="#">Of the Week</a>
-          <a href="#">Of the Month</a>
-          <a href="#">Of the Year</a>
-          <a href="#">All Time</a>
-        </div>
-      </div>
-      <button>Login/Register</button>
-    </nav>
+  <nav class="navbar">
+    <div class="logo">MangaVerse</div>
     <input type="text" id="searchBar" placeholder="Search manga...">
-  </header>
+    <div class="nav-buttons">
+      <button class="nav-btn">Home</button>
+      <button class="nav-btn">Genres</button>
+      <button class="nav-btn">Top 5</button>
+      <button class="nav-btn">Login/Register</button>
+    </div>
+  </nav>
 
   <main>
-    <h2 class="section-title">Popular Now</h2>
-    <div class="scroll-wrapper">
-      <button class="scroll-btn left" onclick="scrollLeft('popularManga')">&#8249;</button>
-      <div id="popularManga" class="manga-grid horizontal-scroll"></div>
-      <button class="scroll-btn right" onclick="scrollRight('popularManga')">&#8250;</button>
-    </div>
+    <section class="section">
+      <h2 class="section-title">Popular Now</h2>
+      <div id="popular-scroll" class="scroll-container"></div>
+    </section>
 
-    <h2 class="section-title">Recently Added</h2>
-    <div class="scroll-wrapper">
-      <button class="scroll-btn left" onclick="scrollLeft('recentManga')">&#8249;</button>
-      <div id="recentManga" class="manga-grid horizontal-scroll"></div>
-      <button class="scroll-btn right" onclick="scrollRight('recentManga')">&#8250;</button>
-    </div>
+    <section class="section">
+      <h2 class="section-title">Recently Added</h2>
+      <div id="recent-scroll" class="scroll-container"></div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">All-Time Rankings</h2>
+      <ul id="weekly-list" class="ranking-list"></ul>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2025 MangaVerse. All rights reserved.</p>
+  <footer class="footer">
+    <p>&copy; 2025 MangaVerse. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://discord.com/" target="_blank" aria-label="Discord">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">
+      </a>
+      <a href="https://github.com/" target="_blank" aria-label="GitHub">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+      </a>
+      <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+      </a>
+      <a href="https://reddit.com/" target="_blank" aria-label="Reddit">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111589.png" alt="Reddit">
+      </a>
+    </div>
   </footer>
 
   <script src="script.js"></script>

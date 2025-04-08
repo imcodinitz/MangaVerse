@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  background-color: #111;
+  font-family: 'DM Sans', sans-serif;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.8rem;
+  color: #f94e4e;
+}
+
+#searchBar {
+  width: 40%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-btn:hover {
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.section {
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #222;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.card h3 {
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.ranking-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ranking-list li {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.ranking-list li:hover {
+  background-color: #2a2a2a;
+}
+
+.ranking-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ranking-stats {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  background-color: #1a1a1a;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  #searchBar {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.7rem;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  filter: invert(100%);
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
