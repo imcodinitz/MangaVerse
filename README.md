@@ -11,11 +11,11 @@ Currently at 1.0:
 - Simply Designed Favicon.
 
 In future/final version, note to developers:
-* Majors updates:
-- Make sure to add Login/Register functions (dedicated web page)
-- Adding functions to 4 buttons (Home, Genres, Top 5 - could be altered, Login/Register - as said earlier)
+1. Majors updates:
++ Make sure to add Login/Register functions (dedicated web page)
++ Adding functions to 4 buttons (Home, Genres, Top 5 - could be altered, Login/Register - as said earlier)
 
-* Minors changes:
-- UI/UX tweaks, optimizations.
-- Search Bar?
+2. Minors changes:
++ UI/UX tweaks, optimizations.
++ Search Bar?
 
