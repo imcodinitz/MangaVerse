@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MangaVerse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Manga<span>Verse</span></div>
+    <nav class="nav-buttons">
+      <button onclick="window.location.href='index.html'">Home</button>
+      <div class="dropdown">
+        <button>Genres</button>
+        <div class="dropdown-content genres-dropdown">
+          <a href="#">Action</a>
+          <a href="#">Romance</a>
+          <a href="#">Comedy</a>
+          <a href="#">Drama</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button>Top 5</button>
+        <div class="dropdown-content">
+          <a href="#">Of the Week</a>
+          <a href="#">Of the Month</a>
+          <a href="#">Of the Year</a>
+          <a href="#">All Time</a>
+        </div>
+      </div>
+      <button>Login/Register</button>
+    </nav>
+    <input type="text" id="searchBar" placeholder="Search manga...">
+  </header>
+
+  <main>
+    <h2 class="section-title">Popular Now</h2>
+    <div class="scroll-wrapper">
+      <button class="scroll-btn left" onclick="scrollLeft('popularManga')">&#8249;</button>
+      <div id="popularManga" class="manga-grid horizontal-scroll"></div>
+      <button class="scroll-btn right" onclick="scrollRight('popularManga')">&#8250;</button>
+    </div>
+
+    <h2 class="section-title">Recently Added</h2>
+    <div class="scroll-wrapper">
+      <button class="scroll-btn left" onclick="scrollLeft('recentManga')">&#8249;</button>
+      <div id="recentManga" class="manga-grid horizontal-scroll"></div>
+      <button class="scroll-btn right" onclick="scrollRight('recentManga')">&#8250;</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 MangaVerse. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
