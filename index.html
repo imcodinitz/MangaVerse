@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MangaVerse</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans&family=Righteous&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -13,15 +13,61 @@
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo">MangaVerse</div>
-    <input type="text" id="searchBar" placeholder="Search manga...">
+    <div class="logo">
+      <span class="logo-part-1">Manga</span><span class="logo-part-2">Verse</span>
+    </div>
+    <div class="search-container">
+      <input type="text" id="searchBar" placeholder="Search manga...">
+      <span class="search-icon">🔍</span>
+    </div>
     <div class="nav-buttons">
-      <button class="nav-btn">Home</button>
-      <button class="nav-btn">Genres</button>
-      <button class="nav-btn">Top 5</button>
-      <button class="nav-btn">Login/Register</button>
+      <button class="nav-btn" id="home-btn">Home</button>
+      
+      <div class="genres-dropdown-container">
+        <button class="nav-btn" id="genres-btn">Genres</button>
+        <div class="genres-dropdown">
+          <div class="genres-column">
+            <a href="#" data-genre="action">Action</a>
+            <a href="#" data-genre="adventure">Adventure</a>
+            <a href="#" data-genre="comedy">Comedy</a>
+            <a href="#" data-genre="drama">Drama</a>
+            <a href="#" data-genre="fantasy">Fantasy</a>
+            <a href="#" data-genre="horror">Horror</a>
+          </div>
+          <div class="genres-column">
+            <a href="#" data-genre="mystery">Mystery</a>
+            <a href="#" data-genre="romance">Romance</a>
+            <a href="#" data-genre="sci-fi">Sci-Fi</a>
+            <a href="#" data-genre="slice-of-life">Slice of Life</a>
+            <a href="#" data-genre="sports">Sports</a>
+            <a href="#" data-genre="supernatural">Supernatural</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://kitsu.docs.apiary.io/" target="_blank" rel="noopener noreferrer" class="nav-btn" id="kitsu-api-btn">Kitsu API</a>
+
+      <div class="user-dropdown">
+        <button class="user-btn">
+          <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="User" class="user-icon">
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+        </div>
+      </div>
     </div>
   </nav>
+
+  <section class="welcome-section">
+    <div class="welcome-overlay"></div>
+    <div class="welcome-content">
+      <h1>
+        <span class="welcome-part-1">Manga</span><span class="welcome-part-2">Verse</span>
+      </h1>
+      <p>A place for fellow manga enthusiasts.</p>
+    </div>
+  </section>
 
   <main>
     <section class="section">
@@ -29,10 +75,14 @@
       <div id="popular-scroll" class="scroll-container"></div>
     </section>
 
+    <hr class="section-divider">
+
     <section class="section">
       <h2 class="section-title">Recently Added</h2>
       <div id="recent-scroll" class="scroll-container"></div>
     </section>
+
+    <hr class="section-divider">
 
     <section class="section">
       <h2 class="section-title">All-Time Rankings</h2>
@@ -42,6 +92,7 @@
 
   <footer class="footer">
     <p>&copy; 2025 MangaVerse. All rights reserved.</p>
+    <p class="api-credit">Powered by Kitsu API</p>
     <div class="social-icons">
       <a href="https://discord.com/" target="_blank" aria-label="Discord">
         <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">
